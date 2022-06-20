@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
+import { Report } from './powerbi/Report';
 
 export class Home extends Component {
-  static displayName = Home.name;
+    render() {
+        return (
+            <div>
+                <nav className="navbar bg-light">
+                    <div class="container-fluid">
+                        <div className="d-flex">
+                            <p className="nav-item mb-0 h1" >View report do powerBI services</p>
+                        </div>
+                        <form className="d-flex" >
+                            <Button className="btn btn-secondary" >Login</Button>
+                        </form >
+                    </div>
+                </nav>
 
-  render () {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
-      </div>
-    );
-  }
+                <div className="container">
+                    <Report />
+                </div>
+            </div>
+        );
+    }
 }
